@@ -1,0 +1,26 @@
+{
+  "name": "paint",
+  "version": "1.0.0",
+  "description": "Shareable Paint App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tharunoptimus/paint.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-useragent": "^1.0.15",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "pug": "^3.0.2"
+  }
+}

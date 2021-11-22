@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "sans";
+    src: url(/css/sans.ttf);
+    font-weight: 500;
+    font-display: swap;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+/* Home Page */
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.homeTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+.leftContent {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    color: #5f6368;
+}
+
+.logoContainer {
+    padding-right: 4px;
+}
+
+.logoText {
+    padding-left: 4px;
+}
+
+.rightContent {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-right: 1rem;
+}
+
+.profilePhotoContainer {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.profilePhotoContainer img {
+    border: 1px solid #44444444;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.createNewPaintContainer {
+    background-color: #f1f3f4;
+    padding: 0.5rem 1rem;
+}
+
+.createNewPaintHolder {
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    position: relative;
+    width: 685px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createNewPaintHolder span {
+    padding-bottom: 0.5rem;
+}
+
+.templateContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.templateBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #202124;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.templateBox span {
+    padding-left: 5px;
+}
+
+.templateBox img {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+    height: 118px;
+}
+
+.recentPaintsContainer {
+    background-color: #ffffff;
+}
+.recentPaintsHolder {
+    width: 700px;
+}
+.recentPaints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.paintContainer {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    cursor: pointer;
+}
+
+.paintContainer img {
+    height: 160px;
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.paintContainer span {
+    margin-top: 0.4em;
+    pointer-events: none;
+}
+
+
+/* Paint Page */
+
+.paintPageWrapper {
+    min-height: 100%;
+}
+
+.paintPageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.centralizedDivForPaint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.centralizedDivForPaint > div{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.paintPageTitle span {
+    border: 1px solid #44444444;
+    padding: 0.1rem 0.4rem;
+    font-size: 1.5rem;
+}
+
+.deleteButton {
+    background-color: #f1f3f43a;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    border-radius: 8px;
+    color: #5f6368;
+    cursor: pointer;
+    border: 1px solid #e84118;
+}
+
+.downloadButton {
+    background-color: #f1f3f43a;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    border-radius: 8px;
+    color: #5f6368;
+    cursor: pointer;
+    border: 1px solid #4cd137;
+    text-decoration: none;
+    align-items: center;
+}
+
+.shareButton {
+    background-color: #f1f3f43a;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    border-radius: 8px;
+    color: #5f6368;
+    cursor: pointer;
+    border: 1px solid #3498db;
+}
+
+@media (max-width: 30em) {
+    .mobile-dp-none {
+        display: none;
+    }
+    .recentPaints {
+        flex-direction: column;
+        width: max-content;
+    }
+    .recentPaintsHolder {
+        width: max-content;
+    }
+}

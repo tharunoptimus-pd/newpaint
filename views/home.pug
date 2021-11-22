@@ -1,0 +1,50 @@
+extends layouts/main-layout.pug
+
+block styles 
+    link(rel="manifest", href="/manifest.json")
+    link(rel="shortcut icon", href="favicon.ico")
+    link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    meta(name="theme-color" content="#FFFFFF")
+
+block content
+    .homeContainer
+        .homeTitleContainer
+            .leftContent
+                .logoContainer
+                    img(src="/images/logo.png", alt="Logo", title="Logo", height="40", width="40")
+                .logoText
+                    span Paint
+            .rightContent
+                .profilePhotoContainer(title="Click to Logout")
+                    img(src=userLoggedIn.profilePic, alt="Profile")
+
+        .createNewPaintContainer.mobile-dp-none
+            .createNewPaintHolder
+                span Start a new Paint
+                .templateContainer 
+                    .templateBox#newPaint
+                        img(src="/images/blankPaint.png", alt="Blank Paint", title="Blank Paint")
+                        span Blank Paint
+                    .templateBox#newWithBorders
+                        img(src="/images/border.png", alt="Blank with Border", title="Blank with Border")
+                        span Borders
+                    .templateBox#newWithCat
+                        img(src="/images/cat.png", alt="Blank with Cat", title="Blank with Cat")
+                        span Cat
+
+        .createNewPaintContainer.recentPaintsContainer
+            .createNewPaintHolder.recentPaintsHolder
+                span Recent Paints
+                .recentPaints
+
+                    - var values = userLoggedIn.paints;
+
+                    each val in values
+                        .paintContainer(data-url=val)
+                            img(src="/images/loadingSkeleton.gif", alt="Paint")
+                            span Loading...
+
+
+
+block scripts 
+    script(src="/js/home.js")

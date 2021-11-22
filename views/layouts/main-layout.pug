@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="author", content="tharunoptimus")
+        meta(name="keywords", content="Paint, Shareable, Shareable Paint")
+        meta(name="description", content="Shareable Paint - Share your paint works with the world")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        
+        title #{pageTitle}
+        link(rel="stylesheet", href="/css/main.css")
+        block styles
+    body
+        script.
+            var userLoggedIn = !{userLoggedInJs};
+        .wrapper
+            block content
+                    
+        
+        script(src='/js/common.js')
+        block scripts 

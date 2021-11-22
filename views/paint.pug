@@ -1,0 +1,57 @@
+extends layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet", href="/css/paint.css")
+
+block content
+    script.
+        let paintData = !{paintData}
+    .paintPageWrapper
+        .paintPageHeader
+            .centralizedDivForPaint
+                .deleteButton 
+                    span Delete
+                    img(src="/svgs/delete.svg", alt="Delete")
+            .paintPageTitle
+                span#paintTitle #{pageTitle}
+            .centralizedDivForPaint
+                a.downloadButton(download="paint.png", href="#")
+                        span Download
+                        img(src="/svgs/download.svg", alt="Download")
+                .shareButton
+                    span Share
+                    img(src="/svgs/share.svg", alt="Share")
+        
+        .paintPageContent
+            div#sketch
+                canvas#paint
+
+        .paintTools 
+            .tools 
+                .settings.colors
+                    button#C0069bf &#8203; 
+                    button#Ce71224 &#8203;
+                    button#C7ec400 &#8203;
+                    button#C3eccfd &#8203;
+
+                    button#Cfed430 &#8203; 
+                    button#Cfbae17 &#8203;
+                    button#Cf36323 &#8203;
+                    button#C5b318d &#8203;
+
+                    button#C914bb8 &#8203; 
+                    button#Ccf1278 &#8203;
+                    button#Cc10051 &#8203;
+                    button#C02a556 &#8203;
+                    
+                    button#C000000(style="transform: scale(1.4);") &#8203;
+                    button#Cffffff &#8203;
+
+                .settings.size 
+                    input#brushSize(type="range", min="1", max="20", value="2", step="1")
+
+            
+
+block scripts 
+    script(src="/js/canvas2svg.min.js")
+    script(src="/js/paint.js")
